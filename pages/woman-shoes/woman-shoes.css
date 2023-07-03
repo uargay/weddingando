@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Sree+Krushnadevaraya&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #DAC3C8;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  height: 3528px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.overlay-active {
+  display: block;
+}
+.overlay__btn {
+  position: relative;
+  left: 65%;
+  top: 150px;
+  font-size: 30px;
+  opacity: 40%;
+  border: none;
+  background-color: transparent;
+  transition: 0.7s;
+}
+.overlay__btn:hover {
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.login {
+  display: none;
+  z-index: 3;
+  margin: 100px auto 0;
+  padding: 42px 40px;
+  width: 471px;
+  background-color: white;
+}
+.login__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.login__form {
+  margin: 0 auto;
+  width: 400px;
+}
+.login__text {
+  margin-top: 15px;
+  color: #000000;
+  opacity: 40%;
+}
+.login__input {
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid rgb(118, 118, 118);
+  background-color: transparent;
+}
+.login__input:focus {
+  border-bottom: 2px solid #000000;
+  outline: none;
+}
+.login__input-phone {
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid rgb(118, 118, 118);
+  background-color: transparent;
+}
+.login__input-phone:focus {
+  border-bottom: 2px solid #000000;
+  outline: none;
+}
+.login__icon {
+  padding: 15px 81px;
+  margin: 0 auto;
+}
+.login__btn {
+  color: white;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 73px;
+  font-size: 18px;
+  background-color: #DAC3C8;
+  border: none;
+  margin-top: 50px;
+  border-radius: 2px;
+  transition: 0.7s;
+}
+.login__btn:hover {
+  background-color: #919B5B;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.login__reg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: #9E9376;
+  transition: 0.7s;
+}
+.login__reg:hover {
+  transition: 0.3s;
+  font-size: 16px;
+  color: #000000;
+}
+.login-active {
+  display: block;
+}
+
+.nav {
+  width: 960px;
+  font-size: 24px;
+  margin: 0 auto;
+}
+.nav__logo {
+  padding-top: 54px;
+  padding-bottom: 36px;
+  text-align: center;
+}
+.nav__items {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 3;
+}
+.nav__item {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: 0.7s;
+}
+.nav__item:hover {
+  color: rgb(117, 117, 117);
+  transition: 0.4s;
+}
+.nav__lk {
+  background-color: transparent;
+  border: none;
+}
+.nav__user {
+  width: 30px;
+  opacity: 60%;
+  transition: 0.7s;
+}
+.nav__user:hover {
+  opacity: 100%;
+  transition: 0.4s;
+}
+.nav__subnav {
+  position: relative;
+  display: inline-block;
+}
+.nav__subnav:hover .nav__subnav-content {
+  display: block;
+  background-color: white;
+}
+.nav__subnav-btn {
+  color: white;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  transition: 0.7s;
+}
+.nav__subnav-btn:hover {
+  color: rgb(117, 117, 117);
+  transition: 0.4s;
+}
+.nav__subnav-content {
+  display: none;
+  position: absolute;
+  width: 220px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 21px;
+  text-decoration: none;
+}
+.nav__subnav-item {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.nav__subnav-item:nth-child(1) {
+  margin-bottom: 10px;
+}
+.nav__subnav-item:hover {
+  color: #919B5B;
+}
+
+.shoes-branch {
+  position: absolute;
+  transform: translate(-441px, -407px);
+  z-index: 2;
+}
+
+.catalog__title {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 112px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.catalog__title:before {
+  content: "";
+  height: 1px;
+  width: 220px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 55%;
+  right: 50px;
+}
+.catalog__title:after {
+  content: "";
+  height: 1px;
+  width: 220px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 55%;
+  left: 50px;
+}
+.catalog__item-photo {
+  outline: 0 solid #BD9CA3;
+}
+.catalog__item-photo:hover {
+  outline: 2px solid #BD9CA3;
+  transition: all 0.4s;
+  border: 7px solid #fff;
+  cursor: pointer;
+}
+.catalog__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 47px;
+}
+.catalog__item {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.catalog__item-descr {
+  width: 316px;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  transition: all 0.2s;
+}
+.catalog__item-descr:hover {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.footer {
+  background-color: #DAC3C8;
+  font-size: 24px;
+  color: white;
+  margin-top: 120px;
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 104px;
+  padding-bottom: 90px;
+}
+.footer__phone {
+  margin-bottom: 20px;
+}
+.footer__social-items-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  background-color: #BD9CA3;
+}
+.footer__copyright-text {
+  font-size: 16px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    width: 460px;
+  }
+  .nav__items {
+    text-align: center;
+    display: block;
+  }
+  .nav__item {
+    padding-bottom: 10px;
+  }
+  .nav__subnav {
+    padding-bottom: 10px;
+  }
+  .nav__user {
+    padding-top: 10px;
+  }
+  .container {
+    width: 480px;
+  }
+  .catalog__title {
+    margin-top: 110px;
+  }
+  .catalog__title:before {
+    display: none;
+  }
+  .catalog__title:after {
+    display: none;
+  }
+  .catalog__items {
+    display: block;
+  }
+  .catalog__item {
+    margin-bottom: 30px;
+  }
+  .catalog__item-descr {
+    width: auto;
+  }
+  .footer {
+    margin-top: 50px;
+  }
+  .footer__flex {
+    display: block;
+    text-align: center;
+  }
+  .footer__contacts {
+    margin-bottom: 30px;
+  }
+  .footer__social-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .footer__social-items-icons {
+    width: 250px;
+    margin: 0 auto;
+  }
+  .shoes-branch {
+    transform: translate(-441px, -485px);
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    width: 760px;
+    margin: 0;
+  }
+  .nav__items {
+    text-align: center;
+    width: 751px;
+  }
+  .nav__item {
+    font-size: 18px;
+    padding-top: 7px;
+  }
+  .nav__subnav-btn {
+    font-size: 18px;
+  }
+  .container {
+    width: 750px;
+  }
+  .catalog__title {
+    margin-top: 110px;
+  }
+  .catalog__title:before {
+    display: none;
+  }
+  .catalog__title:after {
+    display: none;
+  }
+  .catalog__item-photo {
+    width: 220px;
+  }
+  .catalog__item-descr {
+    width: 200px;
+    margin-left: 8px;
+  }
+  .dress-branch {
+    transform: translate(-441px, -452px);
+  }
+  .footer {
+    margin-top: 50px;
+  }
+  .footer__flex {
+    display: block;
+    text-align: center;
+  }
+  .footer__contacts {
+    margin-bottom: 30px;
+  }
+  .footer__social-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .footer__social-items-icons {
+    width: 250px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=woman-shoes.css.map */
